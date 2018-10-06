@@ -8,9 +8,19 @@
     "ios": "expo start --ios",
     "eject": "expo eject"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "dependencies": {
     "expo": "^30.0.1",
     "react": "16.3.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.2.0",
+    "@commitlint/config-conventional": "^7.1.2",
+    "husky": "^1.1.1"
   }
 }
