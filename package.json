@@ -1,5 +1,10 @@
 {
   "name": "empty-project-template",
+  "author": {
+    "name": "Divyansh Mahajan",
+    "email": "divyanshmahajan.24@gmail.com",
+    "url": "http://divyanshmahajan.com"
+  },
   "main": "node_modules/expo/AppEntry.js",
   "private": true,
   "scripts": {
@@ -19,6 +24,9 @@
     "watchAndStart": "concurrently \"yarn run watch\" \"yarn run start\"",
     "buildAndStart": "yarn run build && yarn run watchAndStart "
   },
+  "workspaces": [
+    "src/components/*"
+  ],
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
