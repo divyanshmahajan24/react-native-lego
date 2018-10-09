@@ -33,17 +33,21 @@
     }
   },
   "dependencies": {
+    "@expo/vector-icons": "^8.0.0",
     "expo": "^30.0.1",
     "react": "16.3.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz"
+    "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
+    "react-navigation": "^2.17.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.2.0",
     "@commitlint/config-conventional": "^7.1.2",
+    "@types/expo__vector-icons": "^6.2.3",
     "@types/jest": "^23.3.3",
     "@types/react": "^16.4.16",
     "@types/react-dom": "^16.0.8",
     "@types/react-native": "^0.57.2",
+    "@types/react-navigation": "^2.0.24",
     "@types/react-test-renderer": "^16.0.3",
     "concurrently": "^4.0.1",
     "husky": "^1.1.1",
