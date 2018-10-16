@@ -1,0 +1,9 @@
+{
+  "name": "@legos/button",
+  "version": "1.0.0-0",
+  "private": true,
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.3.1"
+  }
+}
