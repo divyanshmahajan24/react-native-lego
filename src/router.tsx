@@ -17,7 +17,7 @@ const AppNavigator = createStackNavigator(
     },
   },
   {
-    initialRouteName: 'Ripples',
+    initialRouteName: 'Buttons',
   },
 );
 

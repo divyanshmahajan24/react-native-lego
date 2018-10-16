@@ -1,12 +1,9 @@
 import React from 'react';
-import {
-  ActivityIndicator,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import color from 'color';
+import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
+
+import Ripple from '../ripple';
 
 interface IButtonProps {
   /**
@@ -162,6 +159,11 @@ class Button extends React.PureComponent<IButtonProps> {
       color: text,
     };
 
+    const rippleColor = color(text)
+      .alpha(0.32)
+      .rgb()
+      .string();
+
     return (
       <View
         {...rest}
@@ -173,7 +175,12 @@ class Button extends React.PureComponent<IButtonProps> {
           style,
         ]}
       >
-        <TouchableOpacity onPress={onPress} disabled={disabled}>
+        <Ripple
+          onPress={onPress}
+          disabled={disabled}
+          rippleColor={rippleColor}
+          style={{ borderRadius: borderRadius }}
+        >
           <View style={styles.content}>
             {iconLeft && (
               <MaterialIcons
@@ -202,7 +209,7 @@ class Button extends React.PureComponent<IButtonProps> {
             )}
             {loading && <ActivityIndicator color={text} />}
           </View>
-        </TouchableOpacity>
+        </Ripple>
       </View>
     );
   }

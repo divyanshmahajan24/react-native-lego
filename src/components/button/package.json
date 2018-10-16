@@ -4,6 +4,7 @@
   "private": true,
   "license": "MIT",
   "peerDependencies": {
-    "react": "^16.3.1"
+    "react": "^16.3.1",
+    "@legos/ripple": "^1.0.0-0"
   }
 }

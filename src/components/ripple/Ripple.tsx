@@ -11,6 +11,7 @@ interface IRippleProps {
    * Content to be displayed
    */
   children: React.ReactNode;
+  disabled?: boolean;
   /**
    * Action to be called on press.
    */
@@ -58,12 +59,14 @@ interface IRippleProps {
 class Ripple extends React.Component<IRippleProps> {
   public static defaultProps = {
     borderless: false,
+    disabled: false,
   };
 
   render() {
     const {
       borderless,
       children,
+      disabled,
       onPress,
       onPressIn,
       onPressOut,
@@ -87,6 +90,7 @@ class Ripple extends React.Component<IRippleProps> {
           calculatedRippleColor,
           borderless,
         )}
+        disabled={disabled}
         {...rest}
       >
         {React.Children.only(children) && <View style={style}>{children}</View>}
