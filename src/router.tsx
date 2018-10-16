@@ -2,7 +2,7 @@ import { createStackNavigator } from 'react-navigation';
 
 import screens from './screens';
 
-const { ComponentsList, Buttons } = screens;
+const { ComponentsList, Buttons, Ripples } = screens;
 
 const AppNavigator = createStackNavigator(
   {
@@ -12,9 +12,12 @@ const AppNavigator = createStackNavigator(
     Buttons: {
       screen: Buttons,
     },
+    Ripples: {
+      screen: Ripples,
+    },
   },
   {
-    initialRouteName: 'Buttons',
+    initialRouteName: 'Ripples',
   },
 );
 
