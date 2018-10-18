@@ -1,6 +1,11 @@
 import React from 'react';
 import color from 'color';
-import { TouchableNativeFeedback, View } from 'react-native';
+import {
+  TouchableNativeFeedback,
+  View,
+  RegisteredStyle,
+  ViewStyle,
+} from 'react-native';
 
 interface IRippleProps {
   /**
@@ -31,7 +36,7 @@ interface IRippleProps {
   /**
    * Style property to be applied to the content.
    */
-  style?: any;
+  style?: RegisteredStyle<ViewStyle> | ViewStyle;
 }
 
 /**

@@ -1,6 +1,13 @@
 import React from 'react';
 import color from 'color';
-import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
+import {
+  ActivityIndicator,
+  StyleSheet,
+  Text,
+  View,
+  RegisteredStyle,
+  ViewStyle,
+} from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
 import Ripple from '../ripple';
@@ -48,7 +55,7 @@ interface IButtonProps {
   /**
    * Any custom style to be passed to button.
    */
-  style?: any;
+  style?: RegisteredStyle<ViewStyle> | ViewStyle;
   /**
    * Text color to change color of the text.
    * - In case of transparent or contained button, this prop changes the text color.
